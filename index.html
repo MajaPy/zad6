@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Supabase</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body class="bg-gray-100 p-6">
+
+    <div class="max-w-xl mx-auto bg-white p-6 rounded shadow mt-6">
+        <h1 class="text-3xl font-bold mb-6 text-center text-gray-800">Artykuły</h1>
+
+        <div id="articlesList" class="space-y-4 mb-8">
+            <p class="text-center text-gray-500">Ładowanie artykułów...</p>
+        </div>
+
+        <hr class="my-6 border-gray-300">
+
+        <h2 class="text-xl font-bold mb-4 text-gray-800">Dodaj nowy artykuł</h2>
+        <form id="articleForm" class="space-y-3">
+            <input type="text" id="title" placeholder="Tytuł" required class="w-full border p-2 rounded">
+            <input type="text" id="subtitle" placeholder="Podtytuł" class="w-full border p-2 rounded">
+            <input type="text" id="author" placeholder="Autor" required class="w-full border p-2 rounded">
+            <textarea id="content" placeholder="Treść" required class="w-full border p-2 rounded" rows="4"></textarea>
+            <button type="submit" class="w-full bg-blue-600 text-white p-2 rounded font-bold hover:bg-blue-700 transition">Wyślij</button>
+        </form>
+    </div>
+
+    <script type="module" src="/src/main.js" defer></script>
+</body>
+</html>
